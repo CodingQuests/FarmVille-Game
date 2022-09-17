@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" type="Texture" id=1]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Grass"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 160, 160 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 2 ), 144, Vector2( 0, 3 ), 146, Vector2( 0, 4 ), 18, Vector2( 0, 5 ), 16, Vector2( 0, 6 ), 48, Vector2( 1, 2 ), 432, Vector2( 1, 3 ), 438, Vector2( 1, 4 ), 54, Vector2( 1, 5 ), 48, Vector2( 1, 6 ), 446, Vector2( 2, 2 ), 504, Vector2( 2, 3 ), 511, Vector2( 2, 4 ), 63, Vector2( 2, 5 ), 56, Vector2( 2, 6 ), 251, Vector2( 3, 2 ), 216, Vector2( 3, 3 ), 219, Vector2( 3, 4 ), 27, Vector2( 3, 5 ), 24, Vector2( 3, 6 ), 24, Vector2( 4, 2 ), 255, Vector2( 4, 3 ), 507, Vector2( 4, 4 ), 176, Vector2( 4, 5 ), 50, Vector2( 4, 6 ), 443, Vector2( 4, 7 ), 254, Vector2( 5, 2 ), 447, Vector2( 5, 3 ), 510, Vector2( 5, 4 ), 152, Vector2( 5, 5 ), 26, Vector2( 5, 6 ), 254, Vector2( 5, 7 ), 443, Vector2( 6, 1 ), 178, Vector2( 6, 2 ), 186, Vector2( 6, 3 ), 144, Vector2( 6, 4 ), 506, Vector2( 6, 5 ), 191, Vector2( 6, 6 ), 18, Vector2( 7, 2 ), 154, Vector2( 7, 3 ), 182, Vector2( 7, 4 ), 434, Vector2( 7, 5 ), 248, Vector2( 7, 6 ), 59, Vector2( 8, 1 ), 184, Vector2( 8, 2 ), 58, Vector2( 8, 3 ), 155, Vector2( 8, 4 ), 218, Vector2( 8, 5 ), 440, Vector2( 8, 6 ), 62 ]
+0/autotile/icon_coordinate = Vector2( 2, 3 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Grass" type="TileMap"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
