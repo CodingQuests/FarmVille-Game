@@ -3,7 +3,8 @@
 [ext_resource path="res://Player/Basic Charakter Spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=5]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 6, 3 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -89,7 +90,8 @@ tracks/0/keys = {
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+position = Vector2( 0, -3 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 2 )
@@ -99,6 +101,7 @@ anims/Idle = SubResource( 2 )
 "anims/Walk Up" = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -8 )
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 4

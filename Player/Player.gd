@@ -6,13 +6,14 @@ var state
 var state_manager
 
 var velocity = Vector2()
-var speed = 100
+var speed = 20
 
 func _ready():
 	state_manager = StateManager.new()
 	change_state("idle")
 
 func get_input():
+	Utils.save_game()
 	velocity = Vector2()
 	if Input.is_action_pressed("ui_left"):
 		move_left()
