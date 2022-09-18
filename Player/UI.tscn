@@ -8,7 +8,7 @@ script/source = "extends Label
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var date = OS.get_datetime()
-	Game.Cur_date = OS.get_datetime()
+	#Game.Cur_date = OS.get_datetime()
 	self.text = \"Time: \" + str(date[\"hour\"]) + \" : \"+ str(date[\"minute\"])
 "
 

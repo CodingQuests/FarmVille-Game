@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 onready var timer = $Timer
 onready var plant = $Sprite
@@ -11,15 +11,15 @@ func _ready():
 func _process(delta):
 	match stage:
 		1:
-			plant.frame = 1
+			plant.frame = stage
 		2:
-			plant.frame = 2
+			plant.frame = stage
 		3:
-			plant.frame = 3
+			plant.frame = stage
 		4:
-			plant.frame = 4
+			plant.frame = stage
 		5:
-			plant.frame = 5
+			plant.frame = stage
 		
 
 func _on_Timer_timeout():

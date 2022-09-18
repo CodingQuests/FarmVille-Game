@@ -1,4 +1,13 @@
 extends Node
 
 
-var Cur_date
+var Plot = [
+	{
+		"Seed": 0,
+		"Time": 0,
+	},
+	{
+		"Seed": 0,
+		"Time": 0,
+	},
+]

@@ -23,7 +23,7 @@ func get_file(is_write: bool):
 func save_game():
 	var save_game: File = get_file(true)
 	var data: Dictionary = {
-		"Cur_date": Game.Cur_date,
+		"Plot": Game.Plot,
 	}
 	save_game.store_line(to_json(data))
 	save_game.close()
@@ -35,5 +35,5 @@ func load_game():
 	while not save_game.eof_reached():
 		var current_line = parse_json(save_game.get_line())
 		if current_line:
-			Game.Cur_date = current_line["Cur_date"]
+			Game.Plot = current_line["Plot"]
 	save_game.close()
