@@ -1,39 +1,62 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://UI/Free Inventory/Inventory_style_02c.png" type="Texture" id=1]
 [ext_resource path="res://UI/Inventory.gd" type="Script" id=2]
+[ext_resource path="res://UI/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/SlotContainer.gd" type="Script" id=4]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Label
-
-
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	for i in Game.Harvests.size():
-			if \"Corn\" in Game.Harvests[i][\"Name\"]:
-				self.text = str(Game.Harvests[i][\"Count\"])
-"
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.509804, 0.631373, 0, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Inventory" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="BG" type="Sprite" parent="."]
+visible = false
 position = Vector2( 256, 144 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Label" type="Label" parent="."]
-margin_left = 216.0
-margin_top = 96.0
-margin_right = 256.0
-margin_bottom = 136.0
-text = "sadf"
-align = 1
-valign = 1
-script = SubResource( 1 )
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.243137 )
+margin_left = 104.0
+margin_top = 56.0
+margin_right = 432.0
+margin_bottom = 256.0
+rect_rotation = -0.0677838
+custom_styles/panel = SubResource( 2 )
+
+[node name="SlotContainer" type="GridContainer" parent="."]
+margin_left = 120.0
+margin_top = 72.0
+margin_right = 260.0
+margin_bottom = 112.0
+rect_scale = Vector2( 2, 2 )
+columns = 6
+script = ExtResource( 4 )
+
+[node name="Slot0" parent="SlotContainer" instance=ExtResource( 3 )]
+
+[node name="Slot1" parent="SlotContainer" instance=ExtResource( 3 )]
+margin_left = 24.0
+margin_right = 44.0
+
+[node name="Slot2" parent="SlotContainer" instance=ExtResource( 3 )]
+margin_left = 48.0
+margin_right = 68.0
+
+[node name="Slot3" parent="SlotContainer" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_right = 92.0
+
+[node name="Slot4" parent="SlotContainer" instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_right = 116.0
+
+[node name="Slot5" parent="SlotContainer" instance=ExtResource( 3 )]
+margin_left = 120.0
+margin_right = 140.0

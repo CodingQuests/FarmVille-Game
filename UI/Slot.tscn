@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Slot.gd" type="Script" id=1]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Corn.png" type="Texture" id=2]
+[ext_resource path="res://UI/Free Inventory/Inventory_background.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Slot" type="TextureButton"]
+margin_right = 20.0
+margin_bottom = 20.0
+texture_normal = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[node name="Item" type="Sprite" parent="."]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+
+[node name="Count" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 19.0
+margin_bottom = 21.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "1"
+
+[node name="Info" type="Panel" parent="."]
+margin_left = -18.0
+margin_top = -16.0
+margin_right = 38.0
+margin_bottom = -1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Info"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 200.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Item: name
+Count: 0"
+autowrap = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_Slot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Slot_mouse_exited"]

@@ -17,11 +17,11 @@ func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("ui_left"):
 		move_left()
-	if Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right"):
 		move_right()
-	if Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("ui_up"):
 		move_up()
-	if Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down"):
 		move_down()
 	velocity = velocity.normalized()*speed
 	
