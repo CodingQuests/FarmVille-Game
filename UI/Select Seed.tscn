@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Free Inventory/Inventory_Bar.png" type="Texture" id=1]
+[ext_resource path="res://UI/Free Inventory/Inventory_select.png" type="Texture" id=2]
+[ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Basic Plants.png" type="Texture" id=3]
+[ext_resource path="res://UI/Select Seed.gd" type="Script" id=4]
+
+[node name="Select Seed" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Seed1" type="Sprite" parent="."]
+position = Vector2( 27, 32 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+hframes = 6
+vframes = 2
+
+[node name="Select" type="Sprite" parent="Seed1"]
+texture = ExtResource( 2 )
+
+[node name="Seed2" type="Sprite" parent="."]
+position = Vector2( 65, 31 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+hframes = 6
+vframes = 2
+frame = 6
+
+[node name="Select" type="Sprite" parent="Seed2"]
+visible = false
+position = Vector2( 0, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="InventoryBar" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 200, 32 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

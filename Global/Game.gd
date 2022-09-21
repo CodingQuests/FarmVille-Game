@@ -2,12 +2,12 @@ extends Node
 
 
 var Plot = [
-	{
-		"Seed": 0,
-		"Time": 0,
-	},
-	{
-		"Seed": 0,
-		"Time": 0,
-	},
 ]
+
+var Harvests = [{
+	"Name": "Tomato",
+	"Count": 1,
+	"Consumable": true,
+}]
+
+var Selected = 0

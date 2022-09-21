@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMaps/Grass.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/UI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Water.tres" type="Texture" id=4]
 [ext_resource path="res://World.gd" type="Script" id=5]
 [ext_resource path="res://TileMaps/Dirt.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Plants/PlotofDirt.tscn" type="PackedScene" id=7]
+[ext_resource path="res://DirtContainer.gd" type="Script" id=8]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
@@ -23,15 +24,29 @@ tile_data = PoolIntArray( 0, 0, 131073, 1, 0, 131074, 2, 0, 131074, 3, 0, 131074
 
 [node name="Dirt" parent="." instance=ExtResource( 6 )]
 
-[node name="Dirt2" type="YSort" parent="."]
+[node name="DirtContainer" type="YSort" parent="."]
+script = ExtResource( 8 )
 
-[node name="Dirt" parent="Dirt2" instance=ExtResource( 7 )]
+[node name="Dirt0" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 136, 88 )
+
+[node name="Dirt1" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 152, 88 )
+
+[node name="Dirt2" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 168, 88 )
+
+[node name="Dirt3" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 184, 88 )
+
+[node name="Dirt4" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 200, 88 )
+
+[node name="Dirt5" parent="DirtContainer" instance=ExtResource( 7 )]
+position = Vector2( 216, 88 )
+
+[node name="Dirt6" parent="DirtContainer" instance=ExtResource( 7 )]
 position = Vector2( 232, 88 )
-
-[node name="Dirt2" parent="Dirt2" instance=ExtResource( 7 )]
-position = Vector2( 248, 88 )
-
-[node name="Seeds" type="YSort" parent="."]
 
 [node name="Player" type="YSort" parent="."]
 
