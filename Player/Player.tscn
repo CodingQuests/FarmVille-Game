@@ -4,7 +4,7 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 6, 3 )
+extents = Vector2( 4, 3 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"

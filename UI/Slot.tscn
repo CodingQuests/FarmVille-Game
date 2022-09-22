@@ -18,31 +18,31 @@ texture_normal = ExtResource( 3 )
 script = ExtResource( 1 )
 
 [node name="Item" type="Sprite" parent="."]
-position = Vector2( 10, 10 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 20, 20 )
+scale = Vector2( 1.42857, 1.42857 )
 texture = ExtResource( 2 )
 
 [node name="Count" type="Label" parent="."]
-margin_left = 4.0
-margin_top = 3.0
-margin_right = 19.0
-margin_bottom = 21.0
+margin_left = 27.0
+margin_top = 26.0
+margin_right = 42.0
+margin_bottom = 44.0
 rect_scale = Vector2( 0.3, 0.3 )
 text = "1"
 
 [node name="Info" type="Panel" parent="."]
 margin_left = -18.0
-margin_top = -16.0
-margin_right = 38.0
+margin_top = -27.0
+margin_right = 58.0
 margin_bottom = -1.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="Label" type="Label" parent="Info"]
 margin_left = 4.0
 margin_top = 1.0
-margin_right = 200.0
-margin_bottom = 49.0
-rect_scale = Vector2( 0.25, 0.25 )
+margin_right = 166.0
+margin_bottom = 63.0
+rect_scale = Vector2( 0.4, 0.4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Item: name
 Count: 0"

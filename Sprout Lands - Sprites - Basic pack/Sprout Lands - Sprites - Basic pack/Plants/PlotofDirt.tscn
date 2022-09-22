@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Plants/PlotofDirt.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 4 )
 
 [node name="Dirt" type="Area2D"]
 script = ExtResource( 2 )
@@ -15,4 +15,5 @@ shape = SubResource( 1 )
 [node name="Dirt" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
-[connection signal="input_event" from="." to="." method="_on_Dirt_input_event"]
+[connection signal="body_entered" from="." to="." method="_on_Dirt_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Dirt_body_exited"]

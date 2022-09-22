@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Panel
+
+
+
+
+func _process(delta):
+	self.rect_size.x = get_node(\"../Label\").rect_size.x + 16
+	self.rect_size.y = get_node(\"../Label\").rect_size.y + 16
+"
+
+[node name="Notification" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.623529 )
+margin_left = 200.0
+margin_top = 72.0
+margin_right = 387.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_styles/panel = SubResource( 1 )
+script = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.623529 )
+margin_left = 208.0
+margin_top = 72.0
+margin_right = 368.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "asdf"
+align = 1
+valign = 1
+autowrap = true

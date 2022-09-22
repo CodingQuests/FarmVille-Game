@@ -4,6 +4,16 @@ extends Node
 const SAVE_PATH: String = "user://savegame.bin"
 const SAVE_PASS: String = "password"
 
+const notif = preload("res://Global/Notification.tscn")
+
+
+func notif(text):
+	if get_child_count() == 0:
+		var notif1 = notif.instance()
+		notif1.get_node("Label").text = str(text)
+		add_child(notif1)
+		yield(get_tree().create_timer(3), "timeout")
+		notif1.queue_free()
 
 func get_file(is_write: bool):
 	var save_game: File = File.new()
@@ -24,6 +34,8 @@ func save_game():
 	var save_game: File = get_file(true)
 	var data: Dictionary = {
 		"Plot": Game.Plot,
+		"Harvests": Game.Harvests,
+		
 	}
 	save_game.store_line(to_json(data))
 	save_game.close()
@@ -36,4 +48,6 @@ func load_game():
 		var current_line = parse_json(save_game.get_line())
 		if current_line:
 			Game.Plot = current_line["Plot"]
+			Game.Harvests = current_line["Harvests"]
+			
 	save_game.close()

@@ -17,6 +17,11 @@ func _process(delta):
 		get_node("Count").text = str(itemCount)
 	
 	if has_item == true:
+		match itemName:
+			"Corn":
+				itemIcon = load("res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Corn.png")
+			"Tomato":
+				itemIcon = load("res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Objects/Tomato.png")
 		get_node("Item").texture = itemIcon
 		get_node("Item").show()
 	else:
@@ -30,3 +35,5 @@ func _on_Slot_mouse_entered():
 
 func _on_Slot_mouse_exited():
 	get_node("Info").hide()
+
+

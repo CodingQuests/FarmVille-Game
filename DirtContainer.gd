@@ -22,6 +22,7 @@ func _ready():
 						get_child(i).add_child(plant1)
 						get_child(i).has_seed = true
 						Utils.save_game()
+					
 				"Tomato":
 					Game.Plot.pop_at(i)
 					var plant1 = Tomatoe.instance()
