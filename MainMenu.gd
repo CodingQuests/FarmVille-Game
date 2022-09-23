@@ -18,4 +18,5 @@ func _ready():
 	Game.Plot = plottemp
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://World.tscn")
+	print("ASDASD")
+	StageManager.change_stage(StageManager.MainWorld)
